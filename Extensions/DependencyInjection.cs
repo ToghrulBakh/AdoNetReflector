@@ -8,7 +8,7 @@ namespace AdoNetReflector.Extensions
     {
         public static void AddAdoNetOrm(this IServiceCollection service, DBSettings settings) 
         {
-            service.AddScoped<IAdoNetService>(x=>new AdoNetService(settings));
+            service.AddSingleton<IAdoNetService>(x=>new AdoNetService(settings));
         }
     }
 }
